@@ -1,7 +1,16 @@
 import "./App.css";
+import { BlogPosts } from "./Components/BlogPosts/BlogPosts";
+import { Footer } from "./Components/Footer/Footer";
+import { Header } from "./Components/Header/Header";
 
 function App() {
-  return <h1>Ralis</h1>;
+  return (
+    <>
+      <Header />
+      <BlogPosts />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
