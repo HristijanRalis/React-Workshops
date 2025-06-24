@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styles from "./BlogPosts.module.scss";
-import { resolveObjectURL } from "buffer";
 import { Post } from "../BlogPost/BlogPost";
 interface BlogPost {
   id: number;
@@ -14,7 +13,7 @@ export const BlogPosts = () => {
     try {
       const fetchData = async () => {
         const response = await fetch(
-          " http://jsonplaceholder.typicode.com/posts"
+          "http://jsonplaceholder.typicode.com/posts"
         );
         const data = await response.json();
         setPosts(data);
@@ -26,19 +25,10 @@ export const BlogPosts = () => {
     }
   }, []);
   return (
-    <div className={styles.blogPostContainer}>
-      return (
-      <div className={styles.blogPostContainer}>
-        {posts.map((post) => (
-          <Post
-            key={post.id}
-            id={post.id}
-            title={post.title}
-            body={post.body}
-          />
-        ))}
-      </div>
-      );
+    <div className={styles.blogPostsContainer}>
+      {posts.map((post) => (
+        <Post key={post.id} id={post.id} title={post.title} body={post.body} />
+      ))}
     </div>
   );
 };
