@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 body {
-  background: url(https://images.pexels.com/photos/1089455/pexels-photo-1089455.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) center;
+  background: url(https://images.pexels.com/photos/1089455/pexels-photo-1089455.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+    center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -13,7 +14,7 @@ body {
   top: 40%;
   left: 0;
   margin: 0 auto;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
 }
 .container p {
   font-size: 20px;
@@ -29,7 +30,7 @@ body {
   top: 5px;
 }
 .container a:after {
-  content: '';
+  content: "";
   position: absolute;
   background: #1abc9c;
   height: 2px;
@@ -37,16 +38,18 @@ body {
   transform: translateX(-50%);
   left: 50%;
   bottom: 0;
-  transition: .35s ease;
+  transition: 0.35s ease;
 }
-.container a:hover:after, .container a:focus:after, .container a:active:after {
+.container a:hover:after,
+.container a:focus:after,
+.container a:active:after {
   width: 100%;
 }
 
 h1 {
   position: relative;
   text-align: center;
-  font-family: 'Varela Round', serif;
+  font-family: "Varela Round", serif;
 }
 
 .button_container {
@@ -57,22 +60,22 @@ h1 {
   width: 35px;
   cursor: pointer;
   z-index: 100;
-  transition: opacity .25s ease;
+  transition: opacity 0.25s ease;
 }
 .button_container:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
 .button_container.active .top {
   transform: translateY(11px) translateX(0) rotate(45deg);
-  background: #FFF;
+  background: #fff;
 }
 .button_container.active .middle {
   opacity: 0;
-  background: #FFF;
+  background: #fff;
 }
 .button_container.active .bottom {
   transform: translateY(-11px) translateX(0) rotate(-45deg);
-  background: #FFF;
+  background: #fff;
 }
 .button_container span {
   background: #1abc9c;
@@ -82,7 +85,7 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  transition: all .35s ease;
+  transition: all 0.35s ease;
   cursor: pointer;
 }
 .button_container span:nth-of-type(2) {
@@ -102,26 +105,26 @@ h1 {
   opacity: 0;
   z-index: 1;
   visibility: hidden;
-  transition: opacity .35s, visibility .35s, height .35s;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
   overflow: hidden;
 }
 .overlay.open {
-  opacity: .9;
+  opacity: 0.9;
   visibility: visible;
   height: 100%;
 }
 .overlay.open li {
-  animation: fadeInRight .5s ease forwards;
-  animation-delay: .35s;
+  animation: fadeInRight 0.5s ease forwards;
+  animation-delay: 0.35s;
 }
 .overlay.open li:nth-of-type(2) {
-  animation-delay: .4s;
+  animation-delay: 0.4s;
 }
 .overlay.open li:nth-of-type(3) {
-  animation-delay: .45s;
+  animation-delay: 0.45s;
 }
 .overlay.open li:nth-of-type(4) {
-  animation-delay: .50s;
+  animation-delay: 0.5s;
 }
 .overlay nav {
   position: relative;
@@ -129,7 +132,7 @@ h1 {
   top: 50%;
   transform: translateY(-50%);
   font-size: 50px;
-  font-family: 'Varela Round', serif;
+  font-family: "Varela Round", serif;
   font-weight: 400;
   text-align: center;
 }
@@ -152,23 +155,25 @@ h1 {
 .overlay ul li a {
   display: block;
   position: relative;
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
   overflow: hidden;
 }
-.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+.overlay ul li a:hover:after,
+.overlay ul li a:focus:after,
+.overlay ul li a:active:after {
   width: 100%;
 }
 .overlay ul li a:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
   width: 0%;
   transform: translateX(-50%);
   height: 3px;
-  background: #FFF;
-  transition: .35s;
+  background: #fff;
+  transition: 0.35s;
 }
 
 @keyframes fadeInRight {
@@ -188,7 +193,7 @@ h1 {
   align-items: center;
 }
 
-.logo-wrap img{
+.logo-wrap img {
   max-width: 200px;
 }
 
@@ -201,7 +206,8 @@ h1 {
 }
 
 body {
-color: #262726; }
+  color: #262726;
+}
 
 .Current {
   text-align: center;
