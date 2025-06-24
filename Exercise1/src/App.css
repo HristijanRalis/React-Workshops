@@ -1,0 +1,54 @@
+.Navbar {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+}
+
+.Navbar a {
+  color: white;
+}
+
+.icon-bar {
+  background-color: black;
+}
+
+.Header {
+  text-align: center;
+  background-image: url(https://images.pexels.com/photos/1287075/pexels-photo-1287075.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+}
+
+.Header h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.Header hr{
+  width: 80px;
+  border: 2px solid white;
+}
+
+.Header p {
+  font-size: 20px;
+}
+
+.Footer {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.Footer i {
+  margin: 10px;
+}
