@@ -1,12 +1,20 @@
 body {
-  background: #000046;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-  25, Safari 5.1-6 */
-  background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000046; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1cb5e0,
+    #000046
+  ); /* Chrome 10-  25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1cb5e0,
+    #000046
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-family: Roboto;
 }
 h1 {
   background-color: #313239;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0;
   padding: 12px 20px;
   text-transform: uppercase;
@@ -48,14 +56,15 @@ span {
   width: 360px;
   margin: 100px auto;
   background: #f7f7f7;
-  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 /* Toggle for to-dos */
 .completed {
   color: gray;
   text-decoration: line-through;
 }
-.fa-toggle-on {
+.fa-toggle-on,
+.fa-toggle-off {
   float: right;
 }
 li:nth-child(2n) {
@@ -63,7 +72,7 @@ li:nth-child(2n) {
 }
 li:hover span {
   width: 40px;
-  opacity: 1.0;
+  opacity: 1;
   cursor: pointer;
 }
 input:focus {

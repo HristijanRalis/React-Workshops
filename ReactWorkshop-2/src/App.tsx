@@ -21,21 +21,36 @@ const App: React.FC = () => {
       title: "learn javascript",
     },
   ]);
-
+  // TUPLE - niza so tocbno opredelen broj na chlenovi
+  const [inputVisible, setInputVisible] = useState(false);
   return (
     <div id="container" className="App">
       <h1>
         To-Do List
-        <i className="fa fa-toggle-on" id="kopce" aria-hidden="true"></i>
+        <i
+          className={`fas fa-toggle-${inputVisible ? "on" : "off"}`}
+          id="kopce"
+          aria-hidden="true"
+          onClick={() => setInputVisible(!inputVisible)}
+        ></i>
       </h1>
-      <input type="text" placeholder="Add New Todo" />
+      {/* <input
+        className={`${!inputVisible ?  "hideInput" : ""}`}
+        type="text"
+        placeholder="Add New Todo"
+      /> */}
+      {inputVisible ? <input type="text" placeholder="Add New Todo" /> : null}
       <ul>
-        <li className="el">
-          <span className="trash">
-            <i className="fa fa-trash"></i>
-          </span>{" "}
-          Todo 1
-        </li>
+        {todosList.map((todo) => {
+          return (
+            <li className="el" key={todo.id}>
+              <span className="trash">
+                <i className="fa fa-trash"></i>
+              </span>{" "}
+              {todo.title}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
