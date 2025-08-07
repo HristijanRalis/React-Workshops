@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Contact } from "./Contact";
+import { AddContact } from "./AddContact";
 
 export interface IContact {
   id: number;
@@ -27,10 +28,36 @@ const initialState: IContact[] = [
 export const Contacts = () => {
   const [contacts, setContacts] = useState<IContact[]>(initialState);
 
+  const handleAddContact = (newContact: IContact) => {
+    setContacts([...contacts, newContact]);
+  };
+
+  const handleDeleteContact = (contactId: number) => {
+    const filteredContacts = contacts.filter((c) => c.id !== contactId);
+    setContacts(filteredContacts);
+  };
+
+  useEffect(() => {
+    const storedContacts = localStorage.getItem("contacts");
+
+    if (storedContacts) {
+      setContacts(JSON.parse(storedContacts));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("contacts", JSON.stringify(contacts));
+  }, [contacts]);
+
   return (
     <div>
+      <AddContact handleAddContact={handleAddContact} />
       {contacts.map((contact) => (
-        <Contact key={contact.id} contactData={contact} />
+        <Contact
+          key={contact.id}
+          contactData={contact}
+          handleDeleteContact={handleDeleteContact}
+        />
       ))}
     </div>
   );
