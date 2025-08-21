@@ -1,4 +1,12 @@
-let products = [
+export interface Product {
+  id: number;
+  title: string;
+  price: string;
+  desc: string;
+  stars: number;
+}
+
+export let products: Product[] = [
   {
     id: 1,
     title: "ARCO FLOOR LAMP",
